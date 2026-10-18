@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b2a5b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>একটা সারপ্রাইজ 🦚</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Noto+Serif+Bengali:wght@500;700&family=Tiro+Bangla:ital@0;1&family=Galada&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="locked">
+  <div id="lock">
+    <div class="feather">🦚</div>
+    <p class="script">রাধে রাধে</p>
+    <h1>একটু অপেক্ষা…</h1>
+    <p class="sub">তোমার জন্য একটা ছোট্ট সারপ্রাইজ সাজানো হচ্ছে 💙</p>
+    <div class="lk-count" id="lkCount"></div>
+
+  </div>
+  <div id="petals"></div>
+  <div id="intro">
+    <div class="feather">🦚</div>
+    <p class="script">বাঁশির সুরে বাঁধা আমাদের গল্প</p>
+    <h1>রাধে রাধে</h1>
+    <p class="sub">দুটি মনের দুই মাস</p>
+    <button id="enter">চলো, বৃন্দাবনে যাই 🎶</button>
+
+  </div>
+
+  <button id="fluteBtn" title="বাঁশি চালু/বন্ধ">🎵</button>
+
+  <main>
+    <section id="orbs">
+      <h3>দুটি মন, এক সুর</h3>`
+      <p class="hint" id="orbHint"></p>
+      <div class="orbbox"><canvas id="orbCv"></canvas></div>
+      <p id="orbMsg" class="orbmsg"></p>
+    </section>
+
+    <header class="hero">
+      <p class="script">২৯শে অক্টোবর, আমাদের দুই মাস</p>
+      <h2>দুই মাসের ভালোবাসা, <span id="herName"></span></h2>
+      <p class="verse">তুমি আমার রাধা, আমি তোমার কানু, আমাদের প্রেম যেন বৃন্দাবনের চিরন্তন সুর 💙</p>
+      <div id="countdown"></div>
+    </header>
+
+    <section id="letter">
+      <h3>মনের কথা, শুধু তোমার জন্য 💌</h3>
+      <button id="envelope" class="env">💌<span>চিঠিটা খুলে দেখো</span></button>
+      <article class="paper" id="letterText"></article>
+    </section>
+
+    <section id="gallery">
+      <h3>হারিয়ে যেতে দেব না যে মুহূর্তদের</h3>
+      <p class="hint">ছবিটা ছুঁয়ে দেখো, ভেতরে লুকিয়ে আছে একটা মিষ্টি গল্প ✨</p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="playlist">
+      <h3>যে গানে তোমাকে খুঁজে পাই</h3>
+      <p class="hint"></p>
+      <div class="songs" id="songs"></div>
+      <label class="add">➕ তোমার প্রিয় সুর যোগ করো<input type="file" id="songFile" accept="audio/*" multiple
+          hidden></label>
+      <audio id="audio"></audio>
+    </section>
+
+    <section id="scratch">
+      <h3>আমার একটা গোপন কথা</h3>
+      <p class="hint"></p>
+      <div class="scratch">
+        <div class="sc-text" id="scText"></div><canvas id="scCv"></canvas>
+      </div>
+    </section>
+
+    <section id="jar">
+      <h3>কানাইয়ের মাখনের হাঁড়ি</h3>
+      <p class="hint">চুপিচুপি হাঁড়িটা ভাঙো, ভেতরে আছে আমার মন চুরি করা কথারা</p>
+      <button id="jarBtn" class="jar">🏺</button>
+      <p id="note" class="note">হাঁড়িটা একবার ছুঁয়ে দেখো 💙</p>
+    </section>
+
+    <footer>
+      <p class="script">জন্ম-জন্মান্তরে তুমি আমার রাধা, আমি তোমার কানু।</p>
+      <p id="sign"></p>
+      <p class="script">রাধে রাধে 🦚</p>
+    </footer>
+  </main>
+  <div id="np">
+    <div class="np-bg" id="npBg"></div>
+    <div class="np-shade"></div>
+    <div class="np-head"><button id="npClose" aria-label="বন্ধ"></button>
+      <div><b id="tTitle"></b><span id="tArtist"></span></div>
+    </div>
+    <div class="ly" id="ly"></div>
+    <div class="np-foot">
+      <div class="seekwrap"><canvas id="waveCv"></canvas><input type="range" id="seek" value="0" min="0" max="100"
+          step="0.1"></div>
+      <div class="times"><span id="cT">০:০০</span><span id="dT">০:০০</span></div`` <div class="ctrl"><button id="prev"
+          aria-label="আগের"></button><button id="play" class="big" aria-label="চালাও"></button><button id="next"
+          aria-label="পরের"></button></div>
+    </div>
+  </div>
+  <div id="mini"><img id="miniImg" alt=""><b id="miniTitle"></b><button id="miniPlay" aria-label="চালাও"></button></div>
+  <div id="lightbox"><button id="close">✕</button>
+    <div id="lbCount"></div><button id="lbPrev" class="lbnav" aria-label="আগের">‹</button><button id="lbNext"
+      class="lbnav" aria-label="পরের">›</button>
+    <figure><img id="lbImg" alt="">
+      <figcaption>
+        <h4 id="lbTitle"></h4>
+        <p id="lbText"></p>
+      </figcaption>
+    </figure>
+  </div>
+  <script src="lock.js"></script>
+</body>
+
+</html>
